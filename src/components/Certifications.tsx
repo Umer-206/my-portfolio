@@ -7,7 +7,7 @@ const CERT_DATA = [
     org: "Artificial Intelligence (HCCDA-AI) - NAVTTC Collaboration",
     icon: <Award size={22} />,
     color: "text-blue-500",
-    bg: "bg-red-600/10",
+    bg: "bg-blue-600/10",
   },
   {
     title: "AI and Career Empowerment",
