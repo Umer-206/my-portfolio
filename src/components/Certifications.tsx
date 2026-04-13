@@ -6,7 +6,7 @@ const CERT_DATA = [
     title: "Huawei AI Certification",
     org: "Artificial Intelligence (HCCDA-AI) - NAVTTC Collaboration",
     icon: <Award size={22} />,
-    color: "text-red-500",
+    color: "text-blue-500",
     bg: "bg-red-600/10",
   },
   {
