@@ -10,6 +10,13 @@ const CERT_DATA = [
     bg: "bg-red-600/10",
   },
   {
+    title: "AI and Career Empowerment",
+    org: "University of Maryland (Robert H. Smith School of Business), USA",
+    icon: <GraduationCap size={22} />,
+    color: "text-red-500",
+    bg: "bg-red-500/10",
+  },
+  {
     title: "Programming in Python",
     org: "Certification Training",
     icon: <Code size={22} />,
