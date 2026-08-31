@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import { Navbar } from "./components/layout/Navbar";
 import { ScrollToTop } from "./components/layout/ScrollToTop";
+import { Seo } from "./components/layout/Seo";
 import { Footer } from "./components/layout/Footer";
 import { Home } from "./pages/Home";
 import { Experience } from "./pages/Experience";
@@ -12,6 +13,7 @@ import { Projects } from "./pages/Projects";
 function App() {
   return (
     <div className="font-body antialiased min-h-screen flex flex-col bg-surface-container-lowest text-on-surface">
+      <Seo />
       <ScrollToTop />
       <Navbar />
       <Routes>
