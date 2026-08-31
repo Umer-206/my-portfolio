@@ -48,7 +48,7 @@ export const EducationGrid = () => {
               <span className="block font-label text-xs uppercase tracking-widest text-on-surface-variant mb-1">
                 CGPA
               </span>
-              <span className="block font-headline text-4xl font-bold text-tertiary">3.3</span>
+              <span className="block font-headline text-4xl font-bold text-tertiary">3.2</span>
             </div>
           </div>
 
