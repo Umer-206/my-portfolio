@@ -7,9 +7,9 @@ interface Stat {
 }
 
 const STATS: Stat[] = [
-  { value: 10, label: "Certifications Earned" },
-  { value: 8, label: "Issuing Organizations" },
-  { value: 8, label: "AI-Focused Credentials" },
+  { value: 13, label: "Certifications Earned" },
+  { value: 10, label: "Issuing Organizations" },
+  { value: 10, label: "AI-Focused Credentials" },
 ];
 
 const StatItem = ({ value, suffix = "", label }: Stat) => {

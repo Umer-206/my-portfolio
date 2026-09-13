@@ -2,7 +2,7 @@ import { useCountUp } from "../../hooks/useCountUp";
 import { StatsBar } from "./StatsBar";
 
 export const Expertise = () => {
-  const { ref: certRef, value: certCount } = useCountUp<HTMLDivElement>(10);
+  const { ref: certRef, value: certCount } = useCountUp<HTMLDivElement>(13);
 
   return (
     <section className="mb-32">

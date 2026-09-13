@@ -15,6 +15,52 @@ interface Cert {
 
 const CERTS: Cert[] = [
   {
+    label: "ICICET 2026 · University Canada West, Vancouver",
+    title: "Research Paper Presentation – \"Deep Contextual Learning Versus Traditional Machine Learning in Social Media Sentiment Classification\"",
+    description:
+      "Authored and presented an original research paper at the 2nd International Conference on Intelligent Systems and Computational Strategies in Engineering and Technology (ICICET 26), submitted and managed through Microsoft CMT, comparing deep contextual learning against traditional machine learning approaches for social media sentiment classification.",
+    icon: "auto_stories",
+    variant: "featured",
+    span: "md:col-span-2",
+    image: "/certificates/paper present confrence certification.png",
+  },
+  {
+    label: "Canadian Association for AI & Future Studies",
+    title: "AAIFS Associate Membership 2026",
+    description:
+      "Officially inducted as an Associate Member of the Canadian Association for Artificial Intelligence and Future Studies (AAIFS), in recognition of a continued commitment to advancing the understanding, development, and responsible use of artificial intelligence for the benefit of society.",
+    icon: "workspace_premium",
+    variant: "featured",
+    image: "/certificates/AAIFS-Membership certification.png",
+  },
+  {
+    label: "Dubai Future Foundation",
+    title: "One Million Prompters Initiative",
+    description:
+      "Advanced prompt engineering across leading generative AI models, part of the UAE's national programme to build AI fluency at scale.",
+    icon: "tips_and_updates",
+    variant: "standard",
+    image: "/certificates/one-million-prompters.png",
+  },
+  {
+    label: "HackerRank",
+    title: "Python (Basic) Certificate",
+    description:
+      "Verified proficiency in core Python syntax, data structures, and algorithmic logic through HackerRank's skill certification test.",
+    icon: "terminal",
+    variant: "standard",
+    image: "/certificates/certification_hackerrank_python_basic.png",
+  },
+  {
+    label: "HP LIFE",
+    title: "Data Science & Analytics",
+    description:
+      "Techniques for extracting actionable insights from complex datasets using modern analytical frameworks.",
+    icon: "analytics",
+    variant: "standard",
+    image: "/certificates/data-science-analytics.png",
+  },
+  {
     label: "Huawei",
     title: "Huawei Certified Cloud Developer Associate – AI",
     description:
@@ -34,32 +80,6 @@ const CERTS: Cert[] = [
     image: "/certificates/ai-career-empowerment.png",
   },
   {
-    label: "Dubai Future Foundation",
-    title: "One Million Prompters Initiative",
-    description:
-      "Advanced prompt engineering across leading generative AI models, part of the UAE's national programme to build AI fluency at scale.",
-    icon: "tips_and_updates",
-    variant: "standard",
-    image: "/certificates/one-million-prompters.png",
-  },
-  {
-    label: "Technical Core",
-    title: "Programming in Python",
-    description:
-      "Foundational mastery of Python syntax, data structures, and algorithmic logic essential for robust backend development.",
-    icon: "terminal",
-    variant: "standard",
-  },
-  {
-    label: "HP LIFE",
-    title: "Data Science & Analytics",
-    description:
-      "Techniques for extracting actionable insights from complex datasets using modern analytical frameworks.",
-    icon: "analytics",
-    variant: "standard",
-    image: "/certificates/data-science-analytics.png",
-  },
-  {
     label: "HP LIFE",
     title: "AI for Business Professionals",
     description:
@@ -76,6 +96,7 @@ const CERTS: Cert[] = [
     icon: "account_tree",
     variant: "highlighted",
     span: "md:col-span-2 lg:col-span-1",
+    image: "/certificates/LangGraph Essentials – Python.jpg",
   },
   {
     label: "Simplilearn",
@@ -93,6 +114,7 @@ const CERTS: Cert[] = [
       "Core principles of agile methodology, iterative development, and effective cross-functional collaboration.",
     icon: "group_work",
     variant: "standard",
+    image: "/certificates/Scrum111.jpeg",
   },
   {
     label: "HP LIFE",
@@ -102,6 +124,15 @@ const CERTS: Cert[] = [
     icon: "psychology",
     variant: "standard",
     image: "/certificates/ai-for-beginners.png",
+  },
+  {
+    label: "HackerRank",
+    title: "Software Engineer Certificate",
+    description:
+      "Verified role-based competency in software engineering fundamentals, including problem-solving and coding proficiency, through HackerRank's certification test.",
+    icon: "code",
+    variant: "standard",
+    image: "/certificates/HackerRank_software_engineer_certificate.png",
   },
 ];
 
@@ -160,7 +191,7 @@ const CertCard = ({ cert, onView }: { cert: Cert; onView: (c: Cert) => void }) =
             alt={`${cert.title} certificate`}
             loading="lazy"
             onError={() => setImgOk(false)}
-            className={`w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03] ${
+            className={`w-full object-contain object-center bg-surface-container-lowest p-2 transition-transform duration-500 group-hover:scale-[1.03] ${
               isFeatured ? "h-56 md:h-72" : "h-44"
             }`}
           />
@@ -251,13 +282,25 @@ const CertLightbox = ({ cert, onClose }: { cert: Cert; onClose: () => void }) =>
   );
 };
 
+const MAJOR_ACHIEVEMENT_COUNT = 2;
+
 export const CertificationsGrid = () => {
   const [active, setActive] = useState<Cert | null>(null);
+  const majorAchievements = CERTS.slice(0, MAJOR_ACHIEVEMENT_COUNT);
+  const otherCerts = CERTS.slice(MAJOR_ACHIEVEMENT_COUNT);
 
   return (
     <>
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-        {CERTS.map((cert) => (
+        {majorAchievements.map((cert) => (
+          <CertCard key={cert.title + cert.label} cert={cert} onView={setActive} />
+        ))}
+      </section>
+
+      <div className="h-px bg-outline-variant/30 my-12" />
+
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        {otherCerts.map((cert) => (
           <CertCard key={cert.title + cert.label} cert={cert} onView={setActive} />
         ))}
       </section>

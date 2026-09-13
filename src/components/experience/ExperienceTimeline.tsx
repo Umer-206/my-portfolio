@@ -22,17 +22,18 @@ const EXPERIENCE: ExperienceItem[] = [
     ],
     tags: ["React", "FastAPI", "Core PHP", "AI Automation"],
   },
-  
+
   {
-    role: "AI Chatbot Developer",
-    company: "Huawei Certification Training (NAVTTC Collaboration)",
-    period: "2026",
+    role: "Generative AI Engineer",
+    company: "DeepVision.ai · Internship",
+    period: "Oct 2025 - Dec 2025 · 3 mos",
     points: [
-      "Built AI-powered applications using LangChain, Streamlit, and Ollama with custom memory and UI tuning.",
-      "Created a Multi-Agent Task Force system for policy, dataset, and innovation insights.",
-      "Designed a RAG-based Q&A system enabling intelligent PDF knowledge retrieval.",
+      "Completed a 3-month Generative AI Engineer internship on-site at DeepVision.ai (Blackstone School of Law & Business, 5 Ahmed Block, Garden Town, Lahore), contributing to the AI Software Development & Research Department.",
+      "Designed and built conversational chatbot workflows, applying prompt design and dialogue-flow structuring for real-world use cases.",
+      "Set up and ran test automation tools to validate AI workflows and catch regressions before deployment.",
+      "Recognized by the HR Manager for professionalism, dedication, and strong commitment to learning throughout the internship.",
     ],
-    tags: ["LangChain", "Streamlit", "Ollama", "RAG"],
+    tags: ["Chatbot Design", "Generative AI", "Test Automation", "Prompt Engineering"],
   },
 
   {

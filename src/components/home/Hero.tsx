@@ -65,9 +65,9 @@ export const Hero = () => {
           }}
         >
           <img
-            src="/11.png"
+            src="/p1111.png"
             alt="M. Umer Iqbal, AI Engineer"
-            className="w-full h-full object-cover object-top scale-[1.1] origin-top -translate-y-[9%]"
+            className="w-full h-full object-cover object-top scale-[1.1] origin-top -translate-y-[10%]"
           />
         </div>
         <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-tertiary-fixed-dim/20 rounded-full blur-2xl" />

@@ -7,6 +7,13 @@ const FOCUS_AREAS = [
 
 const SECONDARY = [
   {
+    period: "2021 – 2023",
+    degree: "Associate Degree in Computer Science",
+    icon: "workspace_premium",
+    institution: "The Superior University, Lahore",
+    body: "HEC-attested, 2-year associate degree (73 credit hours) covering programming fundamentals in Python and Java, object-oriented programming, web development, database design, and an introduction to AI & machine learning, capped by a portfolio-based capstone project. Completed with a CGPA of 2.65 (71%, Grade B) — the direct academic pathway into BS Gaming & Multimedia.",
+  },
+  {
     period: "2020 – 2021",
     degree: "Intermediate (ICS with Physics)",
     icon: "school",
@@ -26,14 +33,14 @@ export const EducationGrid = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 relative z-10">
       {/* Primary Degree */}
-      <article className="md:col-span-8 bg-surface-container-low rounded-3xl p-10 md:p-14 relative overflow-hidden group hover:bg-surface-container transition-all duration-500 ease-out ghost-border">
+      <article className="md:col-span-12 bg-surface-container-low rounded-3xl p-10 md:p-14 relative overflow-hidden group hover:bg-surface-container transition-all duration-500 ease-out ghost-border">
         <div className="absolute -right-24 -top-24 w-64 h-64 bg-primary-fixed-dim/20 rounded-full blur-3xl group-hover:bg-primary-fixed-dim/30 transition-all duration-700 pointer-events-none" />
 
         <div className="relative z-10">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-12">
             <div>
               <span className="font-label text-sm uppercase tracking-wider text-on-surface-variant bg-surface-container-highest px-3 py-1 rounded-full mb-4 inline-block">
-                2021 – 2025
+                2023 – 2025
               </span>
               <h2 className="font-headline text-3xl md:text-4xl font-bold text-on-surface mb-2">
                 BS Gaming &amp; Multimedia
@@ -79,17 +86,17 @@ export const EducationGrid = () => {
       </article>
 
       {/* Secondary Education */}
-      <div className="md:col-span-4 flex flex-col gap-8">
+      <div className="md:col-span-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {SECONDARY.map((item) => (
           <article
             key={item.degree}
-            className="bg-surface-container-low rounded-3xl p-8 flex-grow ghost-border hover:bg-surface-container transition-colors duration-300"
+            className="bg-surface-container-low rounded-3xl p-8 ghost-border hover:bg-surface-container transition-colors duration-300"
           >
             <span className="font-label text-xs uppercase tracking-wider text-on-surface-variant mb-3 block">
               {item.period}
             </span>
             <h3 className="font-headline text-xl font-bold text-on-surface mb-2">{item.degree}</h3>
-            <p className="font-body text-sm text-on-surface-variant flex items-center gap-2 mb-4">
+            <p className="font-body text-sm text-primary font-medium flex items-center gap-2 mb-4">
               <span className="material-symbols-outlined text-[16px]">{item.icon}</span>
               {item.institution}
             </p>

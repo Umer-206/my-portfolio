@@ -9,7 +9,7 @@ interface StatItem {
 // Counts from CERT_DATA/PROJECTS in the pre-redesign components; freelance
 // client count has no source of truth yet — update here once confirmed.
 const STATS: StatItem[] = [
-  { value: 10, suffix: "+", label: "Certifications" },
+  { value: 13, suffix: "+", label: "Certifications" },
   { value: 14, suffix: "+", label: "Projects Delivered" },
   { value: 5, suffix: "+", label: "Freelance Clients" },
 ];
